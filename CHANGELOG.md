@@ -21,3 +21,10 @@
 ### Bugfix
 
 - Removed tap highlights for mobile devices
+
+
+[1.1.2] 2023-06-18
+
+### Bugfix
+
+- Fix for social icons container width issue
