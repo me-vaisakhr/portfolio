@@ -10,6 +10,12 @@
   }
 }
 
+@layer utilities {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -31,9 +37,13 @@ html {
 }
 
 a {
+  all: initial;
+  outline: none;
+  background-color: transparent;
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a:hover {
