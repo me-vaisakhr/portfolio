@@ -7,8 +7,11 @@ const getDateDiff = (startDate: Date, endDate: Date) => {
   const differenceInHours = differenceInMinutes / 60;
   const differenceInDays = differenceInHours / 24;
 
-  const differenceInYear = startDate.getFullYear() - endDate.getFullYear();
+  let differenceInYear = startDate.getFullYear() - endDate.getFullYear();
   const differenceInMonth = startDate.getMonth() - endDate.getMonth();
+
+  if (differenceInMonth < 0) differenceInYear--;
+  console.info({ differenceInYear, differenceInMonth, differenceInDays });
 
   return {
     differenceInDays,
@@ -21,13 +24,27 @@ const getDateDiff = (startDate: Date, endDate: Date) => {
   };
 };
 
+const getExperience = (dateFrom: Date, dateTo: Date) => {
+  var startMonth = dateFrom.getFullYear() * 12 + dateFrom.getMonth();
+  var endMonth = dateTo.getFullYear() * 12 + dateTo.getMonth();
+  var monthInterval = endMonth - startMonth;
+
+  var yearsOfExperience = Math.floor(monthInterval / 12);
+  var monthsOfExperience = monthInterval % 12;
+
+  return {
+    yearsOfExperience,
+    monthsOfExperience,
+  };
+};
+
 export const getBiodata = () => {
   const data: Biodata.Root = {
     name: "Vaisakh R Krishnan",
-    email:"vaisakhr.me@gmail.com",
+    email: "vaisakhr.me@gmail.com",
     tagline: "Frontend Enthusiast | Aspiring Full stack Developer",
     bio: `Hello World 👋!!! I am an enthusiastic frontend developer with more than ${
-      getDateDiff(new Date(), new Date("2015-07-15")).differenceInYear
+      getExperience(new Date("2015-07-15"), new Date()).yearsOfExperience
     }+ years of expertise in both web and game development. I truly love the process of creating a clean, scalable and and effective code base when I build software by following industry standards. 
     In my spare time, I enjoy creating online applications and games that are responsive. Currently I am employed as a Product Engineer at Entri app.`,
     age: getDateDiff(new Date(), new Date("1993-03-25")).differenceInYear,
@@ -131,7 +148,7 @@ export const getBiodata = () => {
           "Node.js",
           "React Native",
           "React Storefront",
-          "moovweb"
+          "moovweb",
         ],
         period: {
           startYear: 2019,
@@ -168,6 +185,12 @@ export const getBiodata = () => {
     ],
     socials: [
       {
+        id: "mail",
+        name: "Mail",
+        icon: "",
+        link: "mailto:vaisakhr.me@gmail.com",
+      },
+      {
         id: "github",
         name: "Github",
         icon: "",
@@ -186,7 +209,7 @@ export const getBiodata = () => {
         link: "https://codepen.io/me-vaisakhr",
       },
     ],
-    resumeUrl: "/Vaisakh_Resume.pdf",
+    resumeUrl: "/portfolio/Vaisakh_Resume.pdf",
   };
 
   return data;

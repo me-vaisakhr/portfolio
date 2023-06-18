@@ -19,7 +19,7 @@ const Section: FC<PropsWithChildren<SectionProps>> = ({
         visible ? "animate-slide-up" : ""
       }`}
     >
-      <h2 className="font-logo font-bold text-2xl sticky top-0 dark:bg-primary bg-white z-10 w-full p-4 md:px-8 text-center lg:text-left">
+      <h2 className="font-logo font-bold text-2xl sticky top-0 dark:bg-mild-transparent-primary bg-mild-transparent-white z-10 w-full p-4 md:px-8 text-center lg:text-left backdrop-blur-sm shadow-black">
         {title}
       </h2>
       <div className="mt-7 p-0 px-4 md:pl-8 group">{children}</div>

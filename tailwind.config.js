@@ -9,6 +9,8 @@ export default {
     extend: {
       backgroundColor: {
         primary: "#242424",
+        "mild-transparent-primary": "rgb(36 36 36 / 0.25)",
+        "mild-transparent-white": "rgba( 255, 255, 255, 0.25 )",
       },
 
       backgroundSize: {

@@ -7,6 +7,7 @@ import ContactButton from "../common/ContactButton";
 import CodepenIcon from "../../icons/CodepenIcon";
 import NavLinks from "../common/NavLinks";
 import { Biodata } from "../../models/biodata";
+import MailIcon from "../../icons/MailIcon";
 
 interface PersonalInfoSectionProps {
   name: string;
@@ -28,12 +29,14 @@ const PersonalInfoSection: FC<PersonalInfoSectionProps> = ({
         return <LinkedInIcon className="w-4 h-4 fill-current" />;
       case "codepen":
         return <CodepenIcon className="w-4 h-4 fill-current" />;
+        case "mail":
+          return <MailIcon className="w-4 h-4 fill-current" />;
       default:
         return <></>;
     }
   };
   return (
-    <section className="h-screen relative items-center lg:fixed max-w-full lg:max-w-sm xl:max-w-lg font-logo flex flex-col justify-center lg:h-full gap-12 lg:gap-8 p-6 lg:items-baseline">
+    <section className="h-screen relative items-center lg:fixed max-w-full lg:max-w-sm xl:max-w-lg font-logo flex flex-col justify-center lg:h-full gap-8 p-6 lg:items-baseline">
       <h1 className="text-3xl font-bold uppercase bg-gradient-to-r text-wh text-black dark:text-white text-center md:text-left bg-400 motion-reduce:animate-none animate-slide-up">
         {name}
       </h1>
@@ -41,7 +44,7 @@ const PersonalInfoSection: FC<PersonalInfoSectionProps> = ({
         {tagline}
       </h4>
       <TypingAnimatedText
-        className="text-justify h-full"
+        className="text-justify h-full text-xs sm:text-sm md:text-md "
         text={bio ? bio : ""}
         duration={50}
       />
@@ -49,7 +52,7 @@ const PersonalInfoSection: FC<PersonalInfoSectionProps> = ({
         <NavLinks />
       </div>
 
-      <footer className="font-default flex flex-wrap justify-center lg:justify-start gap-4 xl:gap-8 col motion-reduce:animate-none animate-slide-down absolute bottom-8 w-9/12 lg:w-full">
+      <footer className="font-default flex flex-wrap justify-center lg:justify-start gap-x-4 gap-y-2 md:gap-x-6 col motion-reduce:animate-none animate-slide-down absolute bottom-8 w-9/12 lg:w-full">
         {connects?.map((connect, index) => (
           <ContactButton
             key={`social-connect-${index}`}

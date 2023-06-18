@@ -23,7 +23,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
 
   return (
     <DynamicMouseAnimator
-      elementRef={elementRef}
+      ref={elementRef}
       className={`motion-reduce:animate-none product-card group-hover:opacity-50 ${
         visible ? "animate-slide-up opacity-100" : "blur-md"
       } mb-16 sm:mb-16 lg:mb-4 transition-all font-default lg:hover:shadow-lg lg:hover:scale-x-105`}
@@ -33,7 +33,9 @@ const ProjectCard: FC<ProjectCardProps> = ({
         <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text bg-400 motion-reduce:animate-none animate-logo">
           {subdescription}
         </span>
-        <p className="text-gray-700 dark:text-gray-400 text-justify">{description}</p>
+        <p className="text-gray-700 dark:text-gray-400 text-justify">
+          {description}
+        </p>
         <div className="flex flex-row gap-2 mt-4">
           <LinkButton name="Code" className="w-fit" url={link} />
           {demo && <LinkButton name="Demo" className="w-fit" url={demo} />}

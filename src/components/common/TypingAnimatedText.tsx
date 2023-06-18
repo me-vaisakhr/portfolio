@@ -26,7 +26,7 @@ const TypingAnimatedText: FC<TypingAnimatedTextProps> = ({
   return (
     <article className="text-center">
       <p
-        className={`text-md text-gray-500 font-default overflow-hidden text-left leading-7 ${
+        className={`text-gray-500 font-default overflow-hidden text-left leading-7 ${
           className ? className : ""
         }`}
       >
