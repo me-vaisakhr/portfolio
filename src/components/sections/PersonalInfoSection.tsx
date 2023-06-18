@@ -52,7 +52,7 @@ const PersonalInfoSection: FC<PersonalInfoSectionProps> = ({
         <NavLinks />
       </div>
 
-      <footer className="font-default flex flex-wrap justify-center lg:justify-start gap-x-4 gap-y-2 md:gap-x-6 col motion-reduce:animate-none animate-slide-down absolute bottom-8 w-9/12 lg:w-full">
+      <footer className="font-default flex flex-wrap justify-center lg:justify-start gap-x-4 gap-y-2 md:gap-x-6 col motion-reduce:animate-none animate-slide-down absolute bottom-8 w-9/12 lg:w-max">
         {connects?.map((connect, index) => (
           <ContactButton
             key={`social-connect-${index}`}
