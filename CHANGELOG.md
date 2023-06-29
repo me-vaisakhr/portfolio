@@ -28,3 +28,9 @@
 ### Bugfix
 
 - Fix for social icons container width issue
+
+[1.2.0] 2023-06-29
+
+### Change
+
+- Updated with new Resume
