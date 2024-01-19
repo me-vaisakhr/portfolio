@@ -34,3 +34,9 @@
 ### Change
 
 - Updated with new Resume
+
+[1.3.0] 2024-01-19
+
+### Change
+
+- Updated with new Resume and projects
