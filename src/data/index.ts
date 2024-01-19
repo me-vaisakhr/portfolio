@@ -80,6 +80,15 @@ export const getBiodata = () => {
     ],
     projects: [
       {
+        title: "common-utils-io",
+        description:
+          "Library for collection of utility functions that required in our day to day programming life",
+        shortDescription: "Typescript | TSUP | Jest ",
+        codeBaseLink:
+          "https://github.com/me-vaisakhr/common-utils-io",
+        demoUrl: "https://www.npmjs.com/package/common-utils-io?activeTab=readme",
+      },
+      {
         title: "Sudoku Game",
         description:
           "A Sudoku game built with React, TypeScript, and SCSS. It have a basic UI part with challenging difficulty levels (easy, medium, hard). It developed on a thought of learning about things regarding Sudoku game and complexities.",
