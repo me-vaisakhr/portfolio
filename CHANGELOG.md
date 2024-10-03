@@ -22,7 +22,6 @@
 
 - Removed tap highlights for mobile devices
 
-
 [1.1.2] 2023-06-18
 
 ### Bugfix
@@ -40,3 +39,9 @@
 ### Change
 
 - Updated with new Resume and projects
+
+[1.3.1] 2024-10-03
+
+### Change
+
+- Updated with new Resume
